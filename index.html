@@ -1,0 +1,101 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Train Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- link to reset css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css" />
+    <!-- link to bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+
+    <!-- main css style sheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/mainStyle.css" />
+
+
+</head>
+
+
+
+<body>
+
+    <header>
+        <h1 class="title text-center">Train Scheduler</h1>
+        <p class="header-text text-center">This Schedule is to help keep the training information organized</p>
+    </header>
+
+    <h4 class="time-text text-center"> THE CURRENT TIME IS: <span id="currentTime"></span></h4>
+
+    <div class="row card-row">
+        <div class="col-sm-12 col-lg-9">
+            <div class="card-heading bg-dark">
+                <h4 class="card-title">Current Train Schedule</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover" id="train-schdule">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="new-train"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-lg-3">
+        <div class="border-dark">
+            <h4 class="card-title">Add Train</h4>
+        </div>
+
+        <div class="">
+            <form>
+                <div class="form-group">
+                    <label for="train-name-input">Train Name</label>
+                    <input class="form-control form-control-sm" id="train-name-input" type="text" />
+                </div>
+
+                <div class="form-group">
+                    <label for="train-name-input">Destination</label>
+                    <input class="form-control form-control-sm" id="destination-input" type="text" />
+                </div>
+
+                <div class="form-group">
+                    <label for="train-name-input">First Train Time (HH:mm - 24-hour clock)</label>
+                    <input class="form-control form-control-sm" id="train-name-input" type="text" />
+                </div>
+
+                <div class="form-group">
+                    <label for="train-name-input">Frequency (min)</label>
+                    <input class="form-control form-control-sm" id="frequency-input" type="text" />
+                </div>
+
+                <button class="btn btn-dark" id="add-train-btn" type="submit">Submit</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- link to jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- connecting to firebase  -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+    <!-- connecting to moment.js for real time -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/locale/af.js"></script>
+    <!-- link to javascript file -->
+    <script type="text/javascript" src="assets/javascript/main.js"></script>
+</body>
+
+</html>
