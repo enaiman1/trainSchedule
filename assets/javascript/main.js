@@ -1,3 +1,6 @@
+
+
+
 //initalize firebase
 var config = {
     apiKey: "AIzaSyBK9cwpi1M_maPcAEyeBA4sU5sh5bJ83xs",
@@ -68,6 +71,7 @@ $("#add-train-btn").on("click", function (event) {
 
 
 });
+// add the next child into the database
 
 function addTrain(childSnapshot) {
     
@@ -127,3 +131,30 @@ setInterval(function(){
     location.reload(true);
 }, 60000);
 
+// rotating background 
+
+// call a function that will take an array of picture and randomly post it when the page loads
+  function randomImage(){
+      var images = [
+
+        "https://download.unsplash.com/photo-1428278953961-a8bc45e05f72",
+        "https://hdwallsource.com/img/2014/5/stunning-train-track-wallpaper-37962-38832-hd-wallpapers.jpg",
+        "https://ak3.picdn.net/shutterstock/videos/25604573/thumb/1.jpg",
+         "https://s.hdnux.com/photos/23/06/41/5007478/5/920x920.jpg",
+         "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/North_Thompson_River.jpg/1200px-North_Thompson_River.jpg"
+      ]
+
+    //   create a variable the willl take the length of an array
+      var carousel = images.length;
+
+    //   takes the array and randomly chooses a an image
+      var rotate = Math.floor(carousel * Math.random());
+      console.log(rotate);
+    //   connect to the div with a a class name of home-intro
+      var element = document.getElementsByClassName("homeIntro");
+      console.log(element);
+    //   styles the random picture into the css
+      element[0].style["background-image"] = "url(" + images[rotate] +")"
+  }
+
+  document.addEventListener("DomContentLoaded", randomImage);

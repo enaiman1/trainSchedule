@@ -27,23 +27,25 @@
 
 
 <body>
+<div class="homeIntro">
+    <!-- header -->
         <header>
-            <h1 class="title text-center">Worldwide Railways</h1>
-            <p class="header-text text-center">Scheduler for the world's most legendary trains</p>
-            
+            <h1>Worldwide Railways</h1>
+            <p>Scheduler for the world's most legendary trains</p>
         </header>
 
+        <div class="timeBox">
         <h4 class="time-text text-center">THE CURRENT TIME IS: <span id="currentTime"></span></h4> 
-    
+    </div>
 
+        <!-- user input -->
         <div class="row card-row">
-
                 <div class="col-sm-12 col-lg-3">
-                        <div class="card border-dark">
-                            <div class="card-heading bg-light">
+                        <div class="card">
+                            <div class="card-heading ">
                                 <h4 class="card-title">Add Train</h4>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body inputer">
                                 <form>
                                     <div class="form-group">
                                         <label for="train-name-input">Train Name</label>
@@ -67,15 +69,16 @@
                             </div>
                         </div>
                     </div>
-        
+        <!-- end of user input -->
 
 
+<!-- result list -->
             <div class="col-sm-12 col-lg-9">
                 <div class="card border-dark">
-                    <div class="card-heading bg-light">
+                    <div class="card-heading">
                         <h4 class="card-title">Current Train Schedule</h4>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body outputer">
                         <table class="table table-hover" id="train-schedule">
                             <thead>
                                 <tr>
@@ -93,9 +96,12 @@
                 </div>
             </div>
         </div>
+        <!-- end of result list -->
+
+        
     
-
-
+    
+</div>
 
     <!-- link to javascript file -->
     <script type="text/javascript" src="assets/javascript/main.js"></script>

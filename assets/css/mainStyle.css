@@ -1,4 +1,38 @@
+/* rotating background image (image will change everytime page is refreshed*/
+.homeIntro{
+    background-image: url("http://hdqwalls.com/wallpapers/train-track-wide.jpg");
+    background-size: cover;
+    height: 100%;
+    text-align: center;
+}
+ 
+/* */
+header,
+.inputer,
+.outputer,
+.timeBox{
+background: url(../image/marble.jpg);
+ border: 2px;
+border-style: inset;
+ border-color: black;
+}
+
+
 header{
     font-family: 'Roboto', sans-serif;
    font-weight: 500;
+   margin-bottom: 4px;
 }
+
+
+.timeBox{
+    width: 40%;
+    margin: 5px auto;
+}
+
+.card-heading {
+    background-color: #cdd8f0;
+}
+
+
+
