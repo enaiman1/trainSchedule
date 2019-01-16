@@ -157,4 +157,4 @@ setInterval(function(){
       element[0].style["background-image"] = "url(" + images[rotate] +")"
   }
 
-  document.addEventListener("DomContentLoaded", randomImage);
+  document.addEventListener("DomContentLoaded", randomImage());
