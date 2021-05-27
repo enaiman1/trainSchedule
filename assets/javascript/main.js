@@ -1,6 +1,4 @@
 
-
-
 //initalize firebase
 var config = {
     apiKey: "AIzaSyBK9cwpi1M_maPcAEyeBA4sU5sh5bJ83xs",
@@ -12,10 +10,10 @@ var config = {
 };
 firebase.initializeApp(config);
 
-//   creating a var that will connect to the firebase database
+//   creating a connection to the firebase database
 var db = firebase.database();
 
-// display current time
+// displays current time
 var currentTime = null;
 
 function updateTime() {
@@ -35,7 +33,6 @@ $("#add-train-btn").on("click", function (event) {
     event.preventDefault();
 
     // create variables and attach them to the id's from our html (this will grab user input)
-
     var trainName = $("#train-name-input").val().trim();
     var trainDestination = $("#destination-input").val().trim();
     var trainTime = $("#train-time-input").val().trim();
